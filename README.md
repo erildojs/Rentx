@@ -1,11 +1,11 @@
-**Requisitos funcionais**
+<!-- **Requisitos funcionais**
   sao as funcionalidades que a app vai ter, ex: cadastrar uma categoria
 
 **Requisitos nao funcionais**
   Nao estao ligados directamente com a regra de negocio da app, ex: qual lib usar, qual banco de dados...
 
 **Regra de negocio**
-  regras que eu espero , por traz do requisitos funcionais, ex: nao deve ser possivel cadastrar uma categoria ja existente...
+  regras que eu espero , por traz do requisitos funcionais, ex: nao deve ser possivel cadastrar uma categoria ja existente... -->
 
 # Cadastro de carro 
 

@@ -1,0 +1,59 @@
+POST http://localhost:3333/categories/import
+content-Type: application/json
+
+{
+  "name": "specification test",
+  "description": "description test",
+}
+
+####
+POST http://localhost:3333/specifications
+content-Type: application/json
+
+{
+  "name": "specification test",
+  "description": "description test",
+}
+
+####
+POST http://localhost:3333/users
+Content-Type: application/json
+
+{
+  "name": "test",
+  "email": "test@gmail.com",
+  "password": "12345",
+  "driver_license": "123456"
+}
+
+####
+POST http://localhost:3333/sessions
+Content-Type: application/json
+
+{
+  "email": "test@gmail.com",
+  "password": "12345"
+}
+
+####
+PATCH  http://localhost:3333/users/avatar
+# Content-Type: application/json
+Content-Type: multipart/form-data; boundary=----WebKitFormBoundary7MA4YWxkTrZu0gW
+Authorization: token eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE2OTgzOTY5NjMsImV4cCI6MTY5ODQ4MzM2Mywic3ViIjoiNjI0NWZmOGYtMTRjNS00MWNhLWIwNmYtMzFjNTVkNWMxYzE4In0.DBrEbO4FNbrTDtizQv6A6dvdh-XxWMlSawtC6pVVlF0
+
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="avatar"; filename="ava.jpg"
+Content-Type: image/jpeg
+
+< C:\Users\ERILDO FRANCISCO\Desktop\ava.jpg
+------WebKitFormBoundary7MA4YWxkTrZu0gW--
+
+###
+POST http://localhost:3333/rentals/devolution/id
+Authorization: token eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE2OTgzOTY5NjMsImV4cCI6MTY5ODQ4MzM2Mywic3ViIjoiNjI0NWZmOGYtMTRjNS00MWNhLWIwNmYtMzFjNTVkNWMxYzE4In0.DBrEbO4FNbrTDtizQv6A6dvdh-XxWMlSawtC6pVVlF0
+
+###
+GET http://localhost:3333/rentals/user
+Authorization: token eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE2OTgzOTY5NjMsImV4cCI6MTY5ODQ4MzM2Mywic3ViIjoiNjI0NWZmOGYtMTRjNS00MWNhLWIwNmYtMzFjNTVkNWMxYzE4In0.DBrEbO4FNbrTDtizQv6A6dvdh-XxWMlSawtC6pVVlF0
+
+

@@ -86,3 +86,4 @@
 
 **RN**
   O usuario deve estar logado na aplicacao  # Rentx
+# Rentx

@@ -3,7 +3,7 @@ content-Type: application/json
 
 {
   "name": "specification test",
-  "description": "description test",
+  "description": "description test"
 }
 
 ####
@@ -12,7 +12,7 @@ content-Type: application/json
 
 {
   "name": "specification test",
-  "description": "description test",
+  "description": "description test"
 }
 
 ####

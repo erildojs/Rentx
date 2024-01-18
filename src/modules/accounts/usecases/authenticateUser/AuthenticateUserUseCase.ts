@@ -15,7 +15,6 @@ interface IResponse {
     email: string;
   },
   token: string
-  
 }
 
 @injectable()

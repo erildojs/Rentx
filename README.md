@@ -59,6 +59,7 @@
 
 **RF**
   Deve ser possivel cadastrar um aluguel.
+
 **RN**
   O aluguel deve ter duracao minima de 24h.
   Nao deve ser possivel cadastrar um novo luguel caso ja exista um aberto para o mesmo usuario.
@@ -86,4 +87,4 @@
 
 **RN**
   O usuario deve estar logado na aplicacao  # Rentx
-# Rentx
+

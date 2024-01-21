@@ -21,7 +21,7 @@ describe('Create Category Controller', () => {
     )
     })
     afterAll(async () => {
-      // await connection.dropDatabase()
+      await connection.dropDatabase()
       await connection.close()
     })
     it('should be able to create a new category', async() => {

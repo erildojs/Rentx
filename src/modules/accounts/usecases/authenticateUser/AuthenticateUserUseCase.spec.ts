@@ -19,8 +19,8 @@ describe("Authenticate User", () => {
     const user:  ICreateUsersDTO = {
       driver_license: '123',
       name: 'test',
-      email: 'text@gmail.com',
-      password: '12345678'
+      email: 'test@gmail.com',
+      password: '12345'
     }
     await createUserUseCase.execute(user)
     const result = await authenticateUserUseCase.execute({
@@ -31,24 +31,24 @@ describe("Authenticate User", () => {
 
   })
 
-  it("should not be able to authenticate an non exist user", () => {
-    expect(async () => {
-      await authenticateUserUseCase.execute({
+  it("should not be able to authenticate an non exist user", async () => {
+    await expect(() => {
+      authenticateUserUseCase.execute({
         email: 'false@gmail.com',
-        password: '12345678'
+        password: '12345'
       })
     }).rejects.toBeInstanceOf(AppError)
 
   })
 
-  it("should not be able to authenticate an non exist user", () => {
+  it("should not be able to authenticate with incorrect password", () => {
     
     expect(async () => {
       const user:  ICreateUsersDTO = {
         driver_license: '123',
         name: 'user test error ',
-        email: 'text@gmail.com',
-        password: '12345678'
+        email: 'text@test.com',
+        password: '12345'
       }
       await createUserUseCase.execute(user)
       await authenticateUserUseCase.execute({

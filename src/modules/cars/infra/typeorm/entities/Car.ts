@@ -12,22 +12,21 @@ class Car {
   name: string;
 
   @Column()
-
   description: string
-  @Column()
 
+  @Column()
   daily_rate: number;
-  @Column()
 
+  @Column()
   available: boolean;
-  @Column()
 
+  @Column()
   license_plate: string;
-  @Column()
 
+  @Column()
   fine_amount: number;
-  @Column()
 
+  @Column()
   brand: string;
 
   @ManyToMany(() => Category)  

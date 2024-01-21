@@ -5,7 +5,7 @@ import { ICreateUsersDTO } from "@modules/accounts/dtos/ICreateUsersDTO";
 import { AppError } from "@shared/errors/AppError";
 
 @injectable()
-export class CreateUserUseCase {
+class CreateUserUseCase {
 
   constructor(
     @inject('UsersRepository')
@@ -23,3 +23,5 @@ export class CreateUserUseCase {
     })
   }
 }
+
+export {CreateUserUseCase}

@@ -4,6 +4,7 @@ import {v4 as uuidV4} from 'uuid'
 
 @Entity('rentals')
 class Rental {
+
   @PrimaryColumn()
   id: string
 

@@ -1,3 +1,17 @@
+POST http://localhost:3333/categories
+content-Type: application/json
+Authorization: token 
+
+{
+  "name": "SUV",
+  "description": "category suv"
+}
+
+####
+GET http://localhost:3333/categories
+content-Type: application/json
+
+####
 POST http://localhost:3333/categories/import
 content-Type: application/json
 

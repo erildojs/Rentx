@@ -9,7 +9,7 @@ import { inject, injectable } from "tsyringe";
 interface IRequest {
   user_id: string;
   car_id: string;
-  expected_return_date: Date;
+  spected_return_date: Date;
 }
 
 @injectable()
@@ -22,20 +22,19 @@ class CreateRentalUseCase {
     @inject("CarsRepository")
     private carsRepository: ICarsRepository
   ) {}
-  async execute({user_id, car_id, expected_return_date }: IRequest): Promise<Rental> {
+  async execute({user_id, car_id, spected_return_date }: IRequest): Promise<Rental> {
     const minimumHour = 24
     const carUnavailable = await this.rentalsRepository.findOpenRentalByCar(car_id)
     if(carUnavailable) throw new AppError('Car is unavailable')
     const rentalOpenToUser = await this.rentalsRepository.findOpenRentalByUser(user_id)
-    if(rentalOpenToUser) throw new AppError('There s a rental in progress for user!')
-    const expectedReturnDateFormat = this.dateProvider.convertToUtc(expected_return_date.toString())
+    if(rentalOpenToUser) throw new AppError('There is a rental in progress for this user!')
     const dateNow = this.dateProvider.dateNow()
-    const compare = this.dateProvider.compareInHours(dateNow, new Date(expectedReturnDateFormat))
+    const compare = this.dateProvider.compareInHours(dateNow, spected_return_date)
     if(compare < minimumHour) throw new AppError('Invalid return time!')
     const rental = await this.rentalsRepository.create({
       user_id,
       car_id,
-      expected_return_date
+      spected_return_date
     })
     await this.carsRepository.updateAvailable(car_id, false)
     return rental

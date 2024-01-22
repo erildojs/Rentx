@@ -25,7 +25,7 @@ class Rental {
   end_date: Date
 
   @Column()
-  expected_return_date: Date
+  spected_return_date: Date
 
   @Column()
   total : number

@@ -24,7 +24,8 @@ describe('Create Category Controller', () => {
       await connection.dropDatabase()
       await connection.close()
     })
-    it('should be able to create a new category', async() => {
+    
+    it('should be able to create a new category', async () => {
       const responseToken = await request(app).post('/sessions').send({
         email: 'admin@rentx.com',
         password: 'admin'
@@ -36,7 +37,8 @@ describe('Create Category Controller', () => {
       }).set({Authorization: `Bearer ${token}`})
       expect(response.status).toBe(201)
     })
-    it('should not be able to create a new category with same name ', async() => {
+
+    it('should not be able to create a new category with same name ', async () => {
       const responseToken = await request(app).post('/sessions').send({
         email: 'admin@rentx.com',
         password: 'admin'

@@ -77,14 +77,14 @@
   Ao realizar a devolucao, o usuario deve ser liberado para outro aluguel
   Ao realizar a devolucao, devera ser calculado o total do aluguel
   Caso o horario de devolucao seja superior ao horario previsto de entrega, devera ser cobrado multa proporcional aos dias de atrazo
-  Caso haja multa,  devera ser somado ao TOTAL do aluguel
+  Caso haja multa,  devera ser somado ao total do aluguel
   O usuario deve estar logado na aplicacao.
 
 # Listagem de alugueis para usuario
 
 **RF**
-  Deve ser possivel realizar a busca de todos os alugueis para o usuario
+  Deve ser possivel realizar a busca de todos os alugueis de um usuario
 
 **RN**
-  O usuario deve estar logado na aplicacao  # Rentx
+  O usuario deve estar logado na aplicacao  
 

@@ -78,6 +78,10 @@ Authorization: token eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE3MDU5MjQ1Nz
 }
 
 ###
+GET http://localhost:3333/cars/available?
+content-Type: application/json
+
+###
 POST http://localhost:3333/rentals
 Content-Type: application/json
 Authorization: token eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE3MDU5MjYyNzYsImV4cCI6MTcwNjAxMjY3Niwic3ViIjoiZTY1MTg5MGUtZTIwNC00MDE4LTgzNzUtODQwYmMyMWRhOGNjIn0.Hy8iJ0fIToBMZXJZ4-HVViophEu0v30alw81_3yTpMM
@@ -90,11 +94,11 @@ Authorization: token eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE3MDU5MjYyNz
 ###
 GET http://localhost:3333/rentals/user
 Content-Type: application/json
-Authorization: token eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE3MDU5MjYyNzYsImV4cCI6MTcwNjAxMjY3Niwic3ViIjoiZTY1MTg5MGUtZTIwNC00MDE4LTgzNzUtODQwYmMyMWRhOGNjIn0.Hy8iJ0fIToBMZXJZ4-HVViophEu0v30alw81_3yTpMM
+Authorization: token eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE3MDYxNzk1MTIsImV4cCI6MTcwNjI2NTkxMiwic3ViIjoiZTY1MTg5MGUtZTIwNC00MDE4LTgzNzUtODQwYmMyMWRhOGNjIn0.x7KgldsrnaTGexQ2kjQlAF80gQ75Cot6ZfTb6lrZmgI
 
 ###
-POST http://localhost:3333/rentals/devolution/id
-Authorization: token eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE2OTgzOTY5NjMsImV4cCI6MTY5ODQ4MzM2Mywic3ViIjoiNjI0NWZmOGYtMTRjNS00MWNhLWIwNmYtMzFjNTVkNWMxYzE4In0.DBrEbO4FNbrTDtizQv6A6dvdh-XxWMlSawtC6pVVlF0
+POST http://localhost:3333/rentals/devolution/1f2e6bc0-5e89-4f0e-b821-67010ee184e4
+Authorization: token eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE3MDYxNzk1MTIsImV4cCI6MTcwNjI2NTkxMiwic3ViIjoiZTY1MTg5MGUtZTIwNC00MDE4LTgzNzUtODQwYmMyMWRhOGNjIn0.x7KgldsrnaTGexQ2kjQlAF80gQ75Cot6ZfTb6lrZmgI
 
 
 

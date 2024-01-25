@@ -43,7 +43,7 @@ export class CarsRepository implements ICarsRepository {
     return car
   }
   async findAvailable(brand?: string | undefined, category_id?: string | undefined, name?: string | undefined): Promise<Car[]> {
-    const carsQuery = await this.repository.createQueryBuilder('c').
+    const carsQuery = this.repository.createQueryBuilder('c').
     where('available = :available', {available: true})
     if(brand) carsQuery.andWhere('brand = :brand', {brand})
     if(name) carsQuery.andWhere('name = :name', {name})

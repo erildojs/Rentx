@@ -19,7 +19,7 @@
         ],
         "requestBody": {
           "content": {
-            "applicaton/json": {
+            "application/json": {
               "schema": {
                 "type": "object",
                 "properties": {
@@ -81,6 +81,9 @@
         "tags": ["Category"],
         "summary": "Upload new category",
         "description": "Upload a new category",
+        "security": [
+          { "bearerAuth": []}
+        ],
         "requestBody": {
           "content": {
             "multipart/form-data": {
@@ -108,6 +111,9 @@
         "tags": ["specifications"],
         "summary": "Create a specification",
         "description": "Create a new specification",
+        "security": [
+          { "bearerAuth": []}
+        ],
         "requestBody": {
           "content": {
             "applicaton/json": {
@@ -158,6 +164,77 @@
           }
         }
       }
+    },
+    "/cars": {
+      "post": {
+        "tags": ["Cars"],
+        "summary": "Create a new car user",
+        "description": "Create a new car",
+        "security": [
+          { "bearerAuth": []}
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/definitions/Car"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "Description Created"
+          },
+          "400": {
+            "description": "Car already exist"
+          }
+        }
+      }
+    },
+    "/cars/images/{id}": {
+      "post": {
+        "tags": ["Cars"],
+        "summary": "Upload images",
+        "description": "Upload images",
+        "security": [
+          { "bearerAuth": []}
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "Car Id",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "multipart/form-data": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "images": {
+                    "type": "array",
+                    "items": {
+                      "type": "string",
+                      "format": "binary"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "Created"
+          }
+        }
+      }
     }
   },
   "definitions": {
@@ -170,6 +247,32 @@
         "description": {
           "type": "string"
         }
+      }
+    },
+    "Car": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+         "brand": {
+          "type": "string"
+         },
+          "category_id": {
+            "type": "string"
+          }, 
+          "daily_rate": {
+            "type": "number"
+          }, 
+          "description": {
+            "type": "string"
+          },
+           "fine_amount": {
+            "type": "number"
+           },
+            "license_plate": {
+              "type": "string"
+            }
       }
     }
   },

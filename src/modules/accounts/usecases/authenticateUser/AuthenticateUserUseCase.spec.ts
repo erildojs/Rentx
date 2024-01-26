@@ -20,12 +20,12 @@ describe("Authenticate User", () => {
       driver_license: '123',
       name: 'test',
       email: 'test@gmail.com',
-      password: '12345'
+      password: '12345',
     }
     await createUserUseCase.execute(user)
     const result = await authenticateUserUseCase.execute({
       email: user.email,
-      password: user.password
+      password: user.password,
     })
     expect(result).toHaveProperty("token")
   })
@@ -33,8 +33,8 @@ describe("Authenticate User", () => {
   it("should not be able to authenticate an non exist user", async () => {
     await expect(
       authenticateUserUseCase.execute({
-        email: 'false@gmail.com',
-        password: '12345'
+        email: 'false@email.com',
+        password: '12345',
       })
     ).rejects.toEqual(new AppError("Email or password incorrect!"))
   })
@@ -44,13 +44,13 @@ describe("Authenticate User", () => {
         driver_license: '123',
         name: 'user test error ',
         email: 'text@test.com',
-        password: '12345'
+        password: "12345",
       }
       await createUserUseCase.execute(user)
       await expect(
         authenticateUserUseCase.execute({
           email: user.email,
-          password: 'incorrect password'
+          password: "incorrect password",
         })
       ).rejects.toEqual(new AppError("Email or password incorrect!"))
   })

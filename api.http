@@ -1,10 +1,10 @@
 POST http://localhost:3333/categories
 content-Type: application/json
-Authorization: token eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE3MDU5MjQ1NzMsImV4cCI6MTcwNjAxMDk3Mywic3ViIjoiNGVlNTVkOGEtZjQ5Ni00MGQyLWEwM2ItZjljN2M3NDk3NGI2In0.sLHZSCApfPcQTg9zBXI-aRZrYTjOJjhkV7QRtWYWksQ
+Authorization: token eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE3MDYyNTg0OTMsImV4cCI6MTcwNjM0NDg5Mywic3ViIjoiNGVlNTVkOGEtZjQ5Ni00MGQyLWEwM2ItZjljN2M3NDk3NGI2In0.yKvQTNwlj9ysgGa1F_hFGLfSoJkhMiIOsFO6sJTnI2w
 
 {
-  "name": "SEDAN",
-  "description": "category sedan"
+  "name": "categoria test",
+  "description": "descricao test"
 }
 
 ####
@@ -45,8 +45,8 @@ POST http://localhost:3333/sessions
 Content-Type: application/json
 
 {
-  "email": "test@gmail.com",
-  "password": "12345"
+  "email": "admin@rentx.com",
+  "password": "admin"
 }
 
 ####

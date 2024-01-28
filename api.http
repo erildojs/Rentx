@@ -23,6 +23,7 @@ content-Type: application/json
 ####
 POST http://localhost:3333/specifications
 content-Type: application/json
+Authorization: token eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFkbWluQHJlbnR4LmNvbSIsImlhdCI6MTcwNjQzMTQ5NCwiZXhwIjoxNzA5MDIzNDk0LCJzdWIiOiI0ZWU1NWQ4YS1mNDk2LTQwZDItYTAzYi1mOWM3Yzc0OTc0YjYifQ.5VCQRsM4e83vALG9dwm3t9MnHia0ekMn2ysyL15L2vI
 
 {
   "name": "specification test",
@@ -100,6 +101,13 @@ Authorization: token eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE3MDYxNzk1MT
 POST http://localhost:3333/rentals/devolution/1f2e6bc0-5e89-4f0e-b821-67010ee184e4
 Authorization: token eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE3MDYxNzk1MTIsImV4cCI6MTcwNjI2NTkxMiwic3ViIjoiZTY1MTg5MGUtZTIwNC00MDE4LTgzNzUtODQwYmMyMWRhOGNjIn0.x7KgldsrnaTGexQ2kjQlAF80gQ75Cot6ZfTb6lrZmgI
 
+###
+POST http://localhost:3333/refresh-token
+Content-Type: application/json
+
+{
+  "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFkbWluQHJlbnR4LmNvbSIsImlhdCI6MTcwNjQzMTQ2OSwiZXhwIjoxNzA5MDIzNDY5LCJzdWIiOiI0ZWU1NWQ4YS1mNDk2LTQwZDItYTAzYi1mOWM3Yzc0OTc0YjYifQ.Drcgk9-mJE0PsgjpZq6KF4r3zmefWgRNmcz8kePksAs"
+}
 
 
 

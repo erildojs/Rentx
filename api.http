@@ -46,8 +46,8 @@ POST http://localhost:3333/sessions
 Content-Type: application/json
 
 {
-  "email": "admin@rentx.com",
-  "password": "admin"
+  "email": "test@gmail.com",
+  "password": "12345678"
 }
 
 ####
@@ -109,5 +109,20 @@ Content-Type: application/json
   "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFkbWluQHJlbnR4LmNvbSIsImlhdCI6MTcwNjQzMTQ2OSwiZXhwIjoxNzA5MDIzNDY5LCJzdWIiOiI0ZWU1NWQ4YS1mNDk2LTQwZDItYTAzYi1mOWM3Yzc0OTc0YjYifQ.Drcgk9-mJE0PsgjpZq6KF4r3zmefWgRNmcz8kePksAs"
 }
 
+###
+POST http://localhost:3333/password/forgot
+Content-Type: application/json
+
+{
+  "email": "test@gmail.com"
+}
+
+###
+POST http://localhost:3333/password/reset?token=7a671bae-288a-4957-a6ee-65af794025df
+Content-Type: application/json
+
+{
+  "password": "12345678"
+}
 
 

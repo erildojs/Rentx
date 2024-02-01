@@ -30,11 +30,11 @@ describe('Create Category Controller', () => {
         email: 'admin@rentx.com',
         password: 'admin'
       })
-      const {token} = responseToken.body
+      const {refresh_token} = responseToken.body
       const response = await request(app).post('/categories').send({
         name: 'category supertest',
         description: 'description supertest'
-      }).set({Authorization: `Bearer ${token}`})
+      }).set({Authorization: `Bearer ${refresh_token}`})
       expect(response.status).toBe(201)
     })
 
@@ -43,11 +43,11 @@ describe('Create Category Controller', () => {
         email: 'admin@rentx.com',
         password: 'admin'
       })
-      const {token} = responseToken.body
+      const {refresh_token} = responseToken.body
       const response = await request(app).post('/categories').send({
         name: 'category supertest',
         description: 'description supertest'
-      }).set({Authorization: `Bearer ${token}`})
+      }).set({Authorization: `Bearer ${refresh_token}`})
       expect(response.status).toBe(400)
     })
 })

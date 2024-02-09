@@ -16,7 +16,7 @@ describe("Create Category", () => {
       name: "category name test",
       description: "category description test"
     }
-    await createCategoryUseCase.execute({name: category.name, description: category.description})
+    await createCategoryUseCase.execute({ name: category.name, description: category.description })
     const categoryCreated = await categoriesRepositoryInMemory.findByName(category.name)
 
     expect(categoryCreated).toHaveProperty("id")
@@ -27,10 +27,10 @@ describe("Create Category", () => {
       name: "category name test",
       description: "category description test"
     }
-    await createCategoryUseCase.execute({name: category.name, description: category.description})
+    await createCategoryUseCase.execute({ name: category.name, description: category.description })
 
     await expect(
-      await createCategoryUseCase.execute({name: category.name, description: category.description})
+      createCategoryUseCase.execute({ name: category.name, description: category.description })
     ).rejects.toEqual(new AppError('category already exists!'))
   })
 })

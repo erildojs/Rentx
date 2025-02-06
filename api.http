@@ -38,7 +38,7 @@ Content-Type: application/json
   "name": "admin",
   "email": "admin@rentx.com",
   "password": "admin",
-  "driver_license": "123456"
+  "driver_license": "12345678"
 }
 
 ####

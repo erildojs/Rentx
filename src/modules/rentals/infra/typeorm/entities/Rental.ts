@@ -1,6 +1,6 @@
 import { Car } from '@modules/cars/infra/typeorm/entities/Car'
 import { Column, CreateDateColumn, Entity, JoinColumn, ManyToOne, PrimaryColumn, UpdateDateColumn } from 'typeorm'
-import {v4 as uuidV4} from 'uuid'
+import { v4 as uuidV4 } from 'uuid'
 
 @Entity('rentals')
 class Rental {
@@ -9,7 +9,7 @@ class Rental {
   id: string
 
   @ManyToOne(() => Car)
-  @JoinColumn({name: 'car_id'})
+  @JoinColumn({ name: 'car_id' })
   car: Car
 
   @Column()
@@ -28,8 +28,8 @@ class Rental {
   spected_return_date: Date
 
   @Column()
-  total : number
-  
+  total: number
+
   @CreateDateColumn()
   created_at: Date
 
@@ -37,10 +37,10 @@ class Rental {
   updated_at: Date
 
   constructor() {
-    if(!this.id) {
+    if (!this.id) {
       this.id = uuidV4()
     }
   }
 }
 
-export {Rental}
+export { Rental }

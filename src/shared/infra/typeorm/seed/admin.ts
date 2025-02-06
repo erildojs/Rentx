@@ -1,6 +1,5 @@
 import { hash } from 'bcryptjs'
-import {v4 as uuidV4} from 'uuid'
-
+import { v4 as uuidV4 } from 'uuid'
 import createConnection from '../index'
 
 async function create() {
@@ -16,4 +15,4 @@ async function create() {
   await connection.close()
 }
 
-create().then(() => console.log('criou'))
+create().then(() => console.log('criou o seed'))
